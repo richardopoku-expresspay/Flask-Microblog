@@ -26,3 +26,9 @@ def login():
 
         return redirect(url_for('index'))
     return render_template('login.html', form=form)
+
+
+@app.route('/logout', methods=['GET', 'POST'])
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
