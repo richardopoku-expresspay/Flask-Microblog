@@ -20,6 +20,9 @@ class User(UserMixin, db.Model):
 
     def find_by_username(username):
         return User.query.filter_by(username=username).first()
+
+    def find_by_email(email):
+        return User.query.filter_by(email=email).first()
     
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
