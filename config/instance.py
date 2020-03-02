@@ -4,7 +4,7 @@ class Config(object):
     '''Parent Configuration Class'''
     DEBUG = False
     CSRF_ENABLED = True
-    SECRET = os.getenv('SECRET')
+    SECRET_KEY = os.getenv('SECRET')
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
 
 
